@@ -1,0 +1,395 @@
+:root {
+  --primary: #FF006F;
+  --secondary: #FF9F43;
+  --accent: #8B5CF6;
+  --bg-dark: #0F0E13;
+  --bg-card: #1C1B22;
+  --text-main: #FFFFFF;
+  --text-muted: #9CA3AF;
+  --border-light: rgba(255, 255, 255, 0.1);
+  --glass-bg: rgba(28, 27, 34, 0.6);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Alexandria', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  line-height: 1.6;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Base Background Gradients matching GradientBackground.tsx (Valentine's Day Theme) */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(180deg, #0F0E13 0%, #1C1B22 100%);
+  z-index: -2;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(180deg, rgba(255, 0, 111, 0.3) 0%, rgba(255, 0, 111, 0.15) 28%, rgba(0, 0, 0, 0) 100%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5vw, 4.2rem);
+  font-weight: 900;
+  background: linear-gradient(90deg, #FFF 0%, #E0E0E0 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1.25rem;
+  letter-spacing: -1px;
+}
+
+p {
+  font-size: 1.125rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: opacity 0.2s ease, color 0.2s ease;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+/* Layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+header {
+  padding: 2rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.75rem;
+  font-weight: 900;
+  color: var(--text-main);
+  text-transform: lowercase;
+  letter-spacing: -1.5px;
+}
+
+.logo-img {
+  width: 42px;
+  height: 42px;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+nav.links {
+  display: flex;
+  gap: 2rem;
+}
+
+nav.links a {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+nav.links a:hover {
+  color: var(--text-main);
+}
+
+/* Official styling for the App Store button */
+.app-store-btn {
+  display: inline-flex;
+  align-items: center;
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #a6a6a6;
+  border-radius: 12px;
+  padding: 8px 18px;
+  text-decoration: none;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  gap: 12px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.app-store-btn:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+.app-store-btn:active {
+  transform: scale(0.98);
+}
+
+.app-store-btn .apple-logo {
+  width: 26px;
+  height: 26px;
+  margin-left: 2px;
+  color: #fff;
+}
+
+.app-store-btn .btn-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: 4px;
+}
+
+.app-store-btn .btn-subtitle {
+  font-size: 10px;
+  line-height: 1;
+  margin-bottom: 3px;
+  color: #fff;
+  font-weight: 400;
+}
+
+.app-store-btn .btn-title {
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.3px;
+  color: #fff;
+}
+
+/* Secondary Button (if needed) */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  border-radius: 100px;
+  font-weight: 700;
+  font-size: 1rem;
+  background: var(--text-main);
+  color: var(--bg-dark);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border: none;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.2);
+}
+
+/* Hero Section */
+.hero {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+  padding: 2rem 0 6rem;
+  position: relative;
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 550px;
+  z-index: 10;
+  animation: fadeUp 0.8s ease backwards;
+}
+
+.hero-badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 100px;
+  background: rgba(255, 0, 111, 0.15);
+  border: 1px solid rgba(255, 0, 111, 0.3);
+  color: #FF87B2;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.5px;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+}
+
+.hero-visual {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  perspective: 1000px;
+  animation: floatIn 1.2s ease backwards 0.2s;
+}
+
+/* Image Mockup */
+.mockup-img {
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+  animation: floatIn 1.2s ease backwards 0.2s;
+}
+
+.mockup-img:hover {
+  transform: rotateY(-2deg) rotateX(1deg) translateY(-10px);
+}
+
+/* Media Queries */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 0 4rem;
+  }
+
+  .hero-content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero-visual {
+    width: 100%;
+    margin-top: 2rem;
+  }
+
+  .mockup-img {
+    transform: none;
+    max-width: 320px;
+  }
+
+  .mockup-img:hover {
+    transform: none;
+  }
+}
+
+/* Animations */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px) rotateY(-20deg) rotateX(10deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) rotateY(-10deg) rotateX(5deg);
+  }
+}
+
+/* Content Pages */
+.page-header {
+  text-align: center;
+  padding: 4rem 0 2rem;
+  animation: fadeUp 0.6s ease backwards;
+}
+
+.page-header h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.content-section {
+  max-width: 800px;
+  margin: 0 auto 4rem;
+  animation: fadeUp 0.8s ease backwards 0.1s;
+}
+
+.content-section h2 {
+  font-size: 1.5rem;
+  margin: 2.5rem 0 1rem;
+  color: var(--text-main);
+  border-bottom: 1px solid var(--border-light);
+  padding-bottom: 0.5rem;
+}
+
+.contact-card {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.contact-email {
+  font-size: 1.75rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  margin: 1.5rem 0;
+}
+
+/* Footer */
+footer {
+  border-top: 1px solid var(--border-light);
+  padding: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+footer p {
+  font-size: 0.875rem;
+  margin: 0;
+  color: #6B7280;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.footer-links a:hover {
+  color: #FFF;
+}
