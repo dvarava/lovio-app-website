@@ -251,7 +251,6 @@ nav.links a:hover {
   display: flex;
   justify-content: center;
   perspective: 1000px;
-  animation: floatIn 1.2s ease backwards 0.2s;
 }
 
 /* Image Mockup */
@@ -259,6 +258,8 @@ nav.links a:hover {
   width: 100%;
   max-width: 380px;
   height: auto;
+  transform: translateY(0) rotateY(-10deg) rotateX(5deg);
+  transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
   animation: floatIn 1.2s ease backwards 0.2s;
 }
 
@@ -288,6 +289,7 @@ nav.links a:hover {
   .mockup-img {
     transform: none;
     max-width: 320px;
+    animation: fadeUp 1s ease backwards 0.2s;
   }
 
   .mockup-img:hover {
