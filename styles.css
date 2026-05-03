@@ -134,8 +134,17 @@ nav.links a:hover {
   color: var(--text-main);
 }
 
-/* Official styling for the App Store button */
-.app-store-btn {
+.download-cta-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+
+/* Store buttons */
+.app-store-btn,
+.google-play-btn {
   display: inline-flex;
   align-items: center;
   background-color: #000;
@@ -146,18 +155,22 @@ nav.links a:hover {
   text-decoration: none;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   gap: 12px;
+  min-height: 52px;
   transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
-.app-store-btn:hover {
+.app-store-btn:hover,
+.google-play-btn:hover {
   opacity: 0.9;
   transform: scale(1.02);
 }
 
-.app-store-btn:active {
+.app-store-btn:active,
+.google-play-btn:active {
   transform: scale(0.98);
 }
 
+.store-logo,
 .app-store-btn .apple-logo {
   width: 26px;
   height: 26px;
@@ -165,14 +178,21 @@ nav.links a:hover {
   color: #fff;
 }
 
-.app-store-btn .btn-text {
+.google-play-logo {
+  width: 28px;
+  height: 28px;
+}
+
+.app-store-btn .btn-text,
+.google-play-btn .btn-text {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   margin-right: 4px;
 }
 
-.app-store-btn .btn-subtitle {
+.app-store-btn .btn-subtitle,
+.google-play-btn .btn-subtitle {
   font-size: 10px;
   line-height: 1;
   margin-bottom: 3px;
@@ -180,7 +200,8 @@ nav.links a:hover {
   font-weight: 400;
 }
 
-.app-store-btn .btn-title {
+.app-store-btn .btn-title,
+.google-play-btn .btn-title {
   font-size: 19px;
   font-weight: 600;
   line-height: 1;
@@ -279,6 +300,10 @@ nav.links a:hover {
     align-items: center;
     display: flex;
     flex-direction: column;
+  }
+
+  .download-cta-group {
+    justify-content: center;
   }
 
   .hero-visual {
