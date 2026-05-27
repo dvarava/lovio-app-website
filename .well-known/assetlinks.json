@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.fourplex.lovio",
+      "sha256_cert_fingerprints": [
+        "33:32:B7:29:74:25:A6:B5:66:CD:9D:44:09:FD:BB:09:62:56:AF:AE:B9:80:9E:26:B2:F0:62:62:DD:5D:EB:C2"
+      ]
+    }
+  }
+]

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lovio</title>
+    <script>
+        (function () {
+            var match = window.location.pathname.match(/^\/invite\/([A-Za-z0-9-]+)/);
+
+            if (match && match[1]) {
+                var code = match[1].toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 6);
+                window.location.replace('/invite/?code=' + encodeURIComponent(code));
+                return;
+            }
+
+            window.location.replace('/');
+        })();
+    </script>
+</head>
+
+<body>
+    <p>Redirecting...</p>
+</body>
+
+</html>

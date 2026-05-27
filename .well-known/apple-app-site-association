@@ -1,0 +1,11 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "3GZ7B6M75G.com.datemateai.app",
+        "paths": ["/invite/*"]
+      }
+    ]
+  }
+}
