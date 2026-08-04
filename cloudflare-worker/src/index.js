@@ -7,7 +7,10 @@ const TRACKING_KEYS = [
 ];
 
 const STORE_URLS = {
-    "/go/ios": "https://apps.apple.com/app/id6743631737",
+    // This is Apple’s native App Store handoff endpoint. Instagram handles it
+    // correctly, while apps.apple.com can leave its iOS in-app browser on a
+    // blank page when Apple redirects again to the itms-appss:// scheme.
+    "/go/ios": "https://search.itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=6743631737",
     "/go/android": "https://play.google.com/store/apps/details?id=com.fourplex.lovio",
 };
 
@@ -29,14 +32,27 @@ export default {
         }
 
         const destination = new URL(storeUrl);
+        const trackingParams = new URLSearchParams();
 
         TRACKING_KEYS.forEach((key) => {
             const value = requestUrl.searchParams.get(key);
 
             if (value !== null) {
-                destination.searchParams.set(key, value);
+                trackingParams.set(key, value);
             }
         });
+
+        if (path === "/go/ios") {
+            const referrer = trackingParams.toString();
+
+            if (referrer) {
+                destination.searchParams.set("referrer", referrer);
+            }
+        } else {
+            trackingParams.forEach((value, key) => {
+                destination.searchParams.set(key, value);
+            });
+        }
 
         return new Response(null, {
             status: 302,
