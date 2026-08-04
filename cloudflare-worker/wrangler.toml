@@ -1,0 +1,7 @@
+name = "lovio-store-redirect"
+main = "src/index.js"
+compatibility_date = "2026-08-03"
+
+routes = [
+    { pattern = "getlovio.app/go/*", zone_name = "getlovio.app" }
+]
