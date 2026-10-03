@@ -423,6 +423,17 @@ button:focus-visible {
   padding-bottom: 0.5rem;
 }
 
+.content-section ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.125rem;
+  color: var(--text-muted);
+}
+
+.content-section li + li {
+  margin-top: 0.5rem;
+}
+
 .contact-card {
   text-align: center;
   padding: 4rem 2rem;
