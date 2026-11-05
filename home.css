@@ -5,6 +5,14 @@
    the shared stylesheet.
    ========================================================================== */
 
+/* The homepage ends on the dark night section. Paint the canvas (what
+   browsers show past the end of the page, under Safari's toolbar and in the
+   overscroll bounce) dark to match. The body keeps the cream ground, so the
+   page itself is unchanged; only the area outside it turns dark. */
+html.is-home {
+  background: #0F0E13;
+}
+
 .h-page {
   position: relative;
   overflow-x: clip;
