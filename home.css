@@ -10,7 +10,14 @@
    overscroll bounce) dark to match. The body keeps the cream ground, so the
    page itself is unchanged; only the area outside it turns dark. */
 html.is-home {
-  background: #0F0E13;
+  --plum: #621F3D;
+  --plum-deep: #1D1118;
+  --coral: #FF425E;
+  --orange: #FF8A5B;
+  --violet: #8B5CF6;
+  --teal: #2EC4C6;
+  --teal-light: #7EE0D9;
+  background: var(--plum-deep);
 }
 
 .h-page {
@@ -39,6 +46,22 @@ html.is-home {
   letter-spacing: .2em;
   text-transform: uppercase;
   color: var(--accent);
+}
+
+.h-grad-cool {
+  background: linear-gradient(90deg, #A78BFA, var(--teal));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  padding-right: .06em;
+}
+
+.h-grad-logo {
+  background: linear-gradient(90deg, var(--coral), var(--orange) 45%, var(--violet));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  padding-right: .06em;
 }
 
 .h-lt {
@@ -720,7 +743,7 @@ html.is-home {
   bottom: 0;
   width: 2px;
   transform: translateX(-50%);
-  background: linear-gradient(180deg, rgba(196, 39, 69, 0), rgba(196, 39, 69, .25) 8%, rgba(196, 39, 69, .25) 92%, rgba(196, 39, 69, 0));
+  background: linear-gradient(180deg, rgba(255, 66, 94, 0), rgba(255, 66, 94, .55) 10%, rgba(255, 138, 91, .6) 90%, rgba(255, 138, 91, 0));
 }
 
 .h-ch {
@@ -785,7 +808,7 @@ html.is-home {
   margin: -9px 0 0 -9px;
   border-radius: 50%;
   background: var(--ground);
-  box-shadow: 0 0 0 2px var(--accent), 0 0 0 8px rgba(196, 39, 69, .1);
+  box-shadow: 0 0 0 2px var(--coral), 0 0 0 8px rgba(255, 66, 94, .14);
 }
 
 .h-ch h3 {
@@ -820,7 +843,7 @@ html.is-home {
   width: 420px;
   height: 420px;
   border-radius: 50%;
-  background: radial-gradient(closest-side, rgba(255, 190, 120, .55), rgba(255, 190, 120, 0));
+  background: radial-gradient(closest-side, rgba(255, 138, 91, .42), rgba(255, 138, 91, 0));
   filter: blur(10px);
 }
 
@@ -976,7 +999,7 @@ html.is-home {
   padding: 330px 0 250px;
   text-align: center;
   color: #fff;
-  background: linear-gradient(180deg, var(--ground) 0%, #F9DFD8 12%, #F2A98F 26%, #D9587A 40%, #A13A66 52%, #7A2856 64%, #3A1634 82%, #0F0E13 100%);
+  background: linear-gradient(180deg, var(--ground) 0%, #FFE1D2 12%, #FFAD7F 25%, #FF6F5E 38%, #E8406A 48%, #A12C5E 60%, var(--plum) 74%, #2E1624 88%, var(--plum-deep) 100%);
 }
 
 .h-orb {
@@ -987,12 +1010,12 @@ html.is-home {
   height: 240px;
   margin-left: -120px;
   border-radius: 50%;
-  background: radial-gradient(circle at 50% 40%, #FFE3B8, #FFB27A 45%, rgba(255, 138, 91, 0) 70%);
+  background: radial-gradient(circle at 50% 40%, #FFF0D6, #FFB27A 42%, rgba(255, 138, 91, 0) 70%);
   opacity: .9;
 }
 
 .h-sunset .h-stamp {
-  color: #8E2E5E;
+  color: var(--plum);
   margin-bottom: 26px;
 }
 
@@ -1012,7 +1035,7 @@ html.is-home {
 
 .h-night {
   position: relative;
-  background: #0F0E13;
+  background: var(--plum-deep);
   color: #fff;
 }
 
@@ -1021,28 +1044,28 @@ html.is-home {
 }
 
 .h-night .h-cap {
-  color: #FF8A9C;
+  color: var(--teal-light);
 }
 
 .h-night .h-stamp {
-  background: rgba(255, 255, 255, .06);
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .1);
-  color: #FF8A9C;
+  background: rgba(139, 92, 246, .12);
+  box-shadow: inset 0 0 0 1px rgba(139, 92, 246, .35);
+  color: #C4B5FD;
 }
 
 .h-night .h-knot {
-  background: #0F0E13;
-  box-shadow: 0 0 0 2px #FF6B86, 0 0 0 8px rgba(255, 107, 134, .14);
+  background: var(--plum-deep);
+  box-shadow: 0 0 0 2px var(--violet), 0 0 0 8px rgba(139, 92, 246, .18);
 }
 
 .h-night .h-rail {
   top: 0;
-  background: linear-gradient(180deg, rgba(255, 107, 134, .3), rgba(255, 107, 134, .3) 85%, rgba(255, 107, 134, 0));
+  background: linear-gradient(180deg, rgba(139, 92, 246, .6), rgba(46, 196, 198, .55) 85%, rgba(46, 196, 198, 0));
 }
 
 .h-night .h-lead a,
 .h-night .faq a {
-  color: #FF8A9C;
+  color: var(--teal-light);
 }
 
 /* 19:30 */
@@ -1051,7 +1074,7 @@ html.is-home {
   top: 60px;
   width: 380px;
   height: 380px;
-  background: rgba(228, 104, 231, .25);
+  background: rgba(255, 66, 94, .24);
 }
 
 .h-date-photo {
@@ -1112,7 +1135,7 @@ html.is-home {
   top: 80px;
   width: 420px;
   height: 360px;
-  background: rgba(255, 66, 94, .22);
+  background: rgba(139, 92, 246, .26);
 }
 
 .h-q {
@@ -1223,7 +1246,7 @@ html.is-home {
   width: 900px;
   height: 500px;
   margin-left: -450px;
-  background: rgba(139, 92, 246, .16);
+  background: rgba(46, 196, 198, .16);
 }
 
 .h-widgets .h-lead {
@@ -1438,12 +1461,12 @@ html.is-home {
 
 .h-faq .faq summary::after {
   background:
-    linear-gradient(#FF8A9C, #FF8A9C) center / 14px 2px no-repeat,
-    linear-gradient(#FF8A9C, #FF8A9C) center / 2px 14px no-repeat;
+    linear-gradient(#7EE0D9, #7EE0D9) center / 14px 2px no-repeat,
+    linear-gradient(#7EE0D9, #7EE0D9) center / 2px 14px no-repeat;
 }
 
 .h-faq .faq details[open] summary::after {
-  background: linear-gradient(#FF8A9C, #FF8A9C) center / 14px 2px no-repeat;
+  background: linear-gradient(#7EE0D9, #7EE0D9) center / 14px 2px no-repeat;
 }
 
 .h-faq .faq details p {
@@ -1494,7 +1517,7 @@ html.is-home {
 .site-footer--dark {
   margin-top: 0;
   border-top-color: rgba(255, 255, 255, .08);
-  background: #0F0E13;
+  background: var(--plum-deep);
   color: #fff;
 }
 
