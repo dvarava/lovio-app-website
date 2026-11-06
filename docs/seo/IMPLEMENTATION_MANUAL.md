@@ -92,7 +92,7 @@
 - **URLs:** keep `/privacy`, `/terms`, `/support.html`, `/feedback.html`, `/download/` and `/invite/` working exactly. New pages use trailing-slash directories (`/features/drawing-widget/`). Canonicals match that form.
 - **Don't touch** `cloudflare-worker/` routing logic except for the click logging in §9.
 - Shared pieces: header and footer (add Features, Blog and About links), store CTA block (always `/go/ios` and `/go/android`), breadcrumb, FAQ block, related-links block, article byline and dates, a JSON-LD helper (escape `</`), and a meta helper that fails the build on a missing or duplicate title or description.
-- Front matter: `title, description, h1, slug, type (feature|article|compare|hub), primaryQuery, related[], publishedAt, updatedAt, draft, sources[]`. With `draft: true` the page is excluded from collections, the sitemap and navigation, and gets `noindex`.
+- Front matter: `title, description, h1, slug, type (feature|article|hub), primaryQuery, related[], publishedAt, updatedAt, draft, sources[]`. With `draft: true` the page is excluded from collections, the sitemap and navigation, and gets `noindex`.
 - Images: real app screenshots (from the owner) as WebP with width and height set; lazy-load everything except the LCP image.
 
 ---
@@ -130,15 +130,10 @@ P1 (phase 2): `/features/date-ideas/`, `/features/shared-memories/`.
 | `/blog/long-distance-date-ideas/` | Proven demand; group ideas by time zone gap, budget and effort | long-distance |
 | `/blog/games-to-play-with-your-partner-on-your-phone/` | Supports the Arcade; can honestly mention non-Lovio options too | couples-games |
 
-### Comparisons (P0, gated on `docs/seo/product-claims.md` evidence)
-| URL | Notes |
-|---|---|
-| `/compare/widgetable-alternative/` | Widgetable is the biggest name in social widgets. Explain that it's built for friends and groups, with pets and many widget types; Lovio is built for one partner, with a full couples app and games |
-| `/compare/locket-for-couples/` | Locket is photo-to-home-screen for friends; compare it with Lovio's Memory and Drawing widgets and pairing. Credit Locket's strengths |
+### Comparisons — dropped
+The owner decided against Lovio-vs-competitor pages (2026-11-06): they are self-published, so they carry little weight with AI assistants, and they create claim risk. "Alternative to X" visibility comes from independent roundups and AlternativeTo instead (`docs/seo/outreach.md`).
 
-Rules: label each page "A comparison by Lovio", date-stamp the facts, link the competitor's official store page, include **"When [competitor] is the better choice"**, and write "not listed" instead of "doesn't have". Create the `/compare/` hub only once 2 comparisons are live.
-
-Phase 2 candidates (only with demand evidence from Search Console): Paired alternative, Between alternative, Paint Love alternative, cute notes for your partner, at-home date ideas, couples bucket list ideas, conversation starters.
+Phase 2 candidates (only with demand evidence from Search Console): cute notes for your partner, at-home date ideas, couples bucket list ideas, conversation starters.
 
 ---
 

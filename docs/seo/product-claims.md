@@ -21,14 +21,6 @@ Every product claim used on a published page needs a row here with evidence. Pag
 | Lock Screen widgets on iPhone | Widget guide (general iOS steps only) | Homepage illustration | — | ⚠️ confirm which Lovio widgets support the Lock Screen |
 | Made by FOURPLEX SIA, Latvia | Home footer, FAQ, JSON-LD | App Store seller name; existing footer | 2026-11-06 | ✅ |
 
-## Competitor claims (comparison drafts)
+## Competitor comparisons
 
-Both comparison pages are `draft: true` and are not built or listed in the sitemap. To publish one, have someone review it against the current listing, then remove `draft: true`.
-
-| Competitor | Claim | Source | Accessed | Status |
-|---|---|---|---|---|
-| Widgetable (HAPPENY TECHNOLOGY PTE. LTD.) | For besties and couples; pets, plants, Sleep Widget, Mood Bubble/Jar, Distance Widget, "Pin It!" snaps, emojis, doodles and texts; optional subscription; iOS 16+ | https://apps.apple.com/app/id1641107226 (App Store lookup API) | 2026-11-06 | ✅ from listing |
-| Widgetable | Days counter, daily questions, date ideas, games | Not listed in the description we checked | 2026-11-06 | Shown as "not listed", never "doesn't have" |
-| Widgetable | Android availability | Not checked | — | ⚠️ check Google Play before publishing |
-| Locket Widget (Locket Labs, Inc.) | Live photos to the Home Screen; up to 20 friends; reactions; history and monthly recap videos; "Crush"/"Best Friend" single-person widgets; free | https://apps.apple.com/app/id1600525061 (App Store lookup API) | 2026-11-06 | ✅ from listing |
-| Locket Widget | Drawings, distance, days counter, questions, games | Not listed in the description we checked | 2026-11-06 | Shown as "not listed" |
+Removed on 2026-11-06 at the owner's request. Don't make claims about other apps on getlovio.app; get Lovio into independent roundups instead (`outreach.md`).

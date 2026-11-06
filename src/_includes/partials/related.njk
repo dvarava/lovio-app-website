@@ -6,7 +6,7 @@
         {%- for item in relatedPages %}
         <li>
             <a class="c-card" href="{{ item.url }}">
-                <span class="c-card-kicker">{{ "Guide" if item.data.type == "article" else ("Comparison" if item.data.type == "compare" else "Feature") }}</span>
+                <span class="c-card-kicker">{{ "Guide" if item.data.type == "article" else "Feature" }}</span>
                 <span class="c-card-title">{{ item.data.cardTitle or item.data.h1 }}</span>
                 <span class="c-card-text">{{ item.data.cardText or item.data.description }}</span>
             </a>

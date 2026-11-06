@@ -10,7 +10,7 @@
   - Production should be faster still, because Cloudflare compresses text files, which the local server doesn't.
 - **Accessibility and SEO:** Lighthouse scores 100 on the homepage, couples-widgets, games, about, guides hub and a guide. Fixed: store buttons' accessible names, and low-contrast labels.
 - **Structured data:** checked in the Schema.org validator with 0 errors and 0 warnings for Organization, WebSite, MobileApplication, WebPage, AboutPage, CollectionPage, BlogPosting and BreadcrumbList. Google's Rich Results Test still needs the live URL after deploy. The app markup won't get a rich result, because Google requires ratings for that and we deliberately don't include store ratings.
-- **Comparison drafts:** checked on desktop and phone. Fixed the byline date. On phones the tables scroll sideways inside their box.
+- **Comparison pages:** removed at the owner's request (not published, no URLs lost).
 - **Outreach:** `docs/seo/outreach.md` has the target list, a pitch template, listing tasks and video ideas.
 
 ## Weeks 2–3: content (same branch)
@@ -19,9 +19,6 @@
 - Features: `/features/couples-widgets/`, `/features/drawing-widget/`, `/features/couples-games/`, `/features/long-distance/`, `/features/daily-questions/`
 - Company: `/about/`, `/press/`
 - Guides: `/blog/` plus `/blog/how-to-add-a-couples-widget-on-iphone-and-android/`, `/blog/drawing-ideas-for-couples/`, `/blog/long-distance-date-ideas/`, `/blog/games-to-play-with-your-partner-on-your-phone/`
-
-### Drafts (not built, not in the sitemap)
-- `/compare/widgetable-alternative/`, `/compare/locket-for-couples/`. Preview them with `DRAFTS=1 npm run serve`; drafts are `noindex`. Blockers: owner review, plus the Android checks in `product-claims.md`. Create a `/compare/` hub once both are live.
 
 ### Site-wide changes
 - New nav on the homepage and legacy pages: Widgets, Games, Long distance, Guides, Support (it replaces the `/#features`, `/#how` and `/#faq` anchor links).
@@ -37,7 +34,6 @@
 1. Read every page for accuracy. Items marked ⚠️ in `product-claims.md` especially need confirming.
 2. Approve the byline "The Lovio team".
 3. Provide real app screenshots. The visuals are currently illustrations built from the homepage's widget art, captioned as such.
-4. Approve or edit the comparison drafts, then remove `draft: true`.
 
 ## Week 1: technical foundation (branch `seo/week-1-foundation`)
 
