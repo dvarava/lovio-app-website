@@ -707,7 +707,7 @@ html.is-home {
 
 .h-ntf-head span {
   font-size: 12px;
-  color: rgba(60, 60, 67, .6);
+  color: rgba(60, 60, 67, .78);
 }
 
 .h-lock-ctrl {
@@ -2086,5 +2086,62 @@ html.is-home {
 
   .h-final .btn-store {
     justify-content: center;
+  }
+}
+
+/* Guides row (links to /blog/ articles) */
+.h-guides {
+  padding: 120px 0 40px;
+  text-align: center;
+}
+.h-guide-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  margin: 48px 0 0;
+  padding: 0;
+  list-style: none;
+  text-align: left;
+}
+.h-guide {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 100%;
+  padding: 28px;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, .05);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .12);
+  color: #fff;
+  text-decoration: none;
+  transition: background .2s ease, transform .2s ease;
+}
+.h-guide:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, .09);
+  transform: translateY(-2px);
+}
+.h-guide b {
+  font-size: 21px;
+  line-height: 1.25;
+}
+.h-guide > span:last-child {
+  font-size: 15px;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, .66);
+}
+.h-guides-more {
+  margin-top: 28px;
+  font-size: 16px;
+}
+.h-night .h-guides-more a {
+  color: var(--teal-light);
+}
+@media (max-width: 900px) {
+  .h-guide-list {
+    grid-template-columns: 1fr;
+  }
+  .h-guides {
+    padding-top: 88px;
   }
 }

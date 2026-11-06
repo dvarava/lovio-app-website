@@ -1,7 +1,7 @@
 module.exports = {
     url: "https://getlovio.app",
     // Bump when styles.css, content.css or site.js change so Cloudflare serves fresh copies.
-    assetVersion: "20261106",
+    assetVersion: "20261106-2",
     // Hand-written pages that are copied as-is and should be indexed.
     // /download/ and /invite/ are noindex, so they stay out of the sitemap.
     staticPages: ["/", "/support.html", "/feedback.html", "/privacy.html", "/terms.html"],

@@ -7,6 +7,8 @@ module.exports = {
     section: "compare",
     sitemap: true,
     breadcrumbs: [],
+    // Date the competitor facts were checked; update when re-verified.
+    publishedAt: "2026-11-06",
     eleventyComputed: {
         permalink: (data) =>
             data.draft && !process.env.DRAFTS ? false : `/compare/${data.page.fileSlug}/`,

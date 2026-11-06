@@ -1,5 +1,18 @@
 # Launch checklist
 
+## Finishing pass
+
+- **Homepage "Guides" row** linking 3 articles, styled for the dark night section.
+- **Speed** (Lighthouse, simulated mobile, local build):
+  - Homepage Performance 92 → 97, first contentful paint 2.5 s → 1.4 s, LCP 2.9 s → 2.6 s.
+  - Feature page 98; guide 100.
+  - What changed: the Alexandria font is now self-hosted (no Google Fonts request), the font and the hero photo are preloaded, and images use WebP (icon 149 KB → 3 KB, logo 20 KB → 2 KB, memory-4 173 KB → 74 KB, hero photo 71 KB → 51 KB).
+  - Production should be faster still, because Cloudflare compresses text files, which the local server doesn't.
+- **Accessibility and SEO:** Lighthouse scores 100 on the homepage, couples-widgets, games, about, guides hub and a guide. Fixed: store buttons' accessible names, and low-contrast labels.
+- **Structured data:** checked in the Schema.org validator with 0 errors and 0 warnings for Organization, WebSite, MobileApplication, WebPage, AboutPage, CollectionPage, BlogPosting and BreadcrumbList. Google's Rich Results Test still needs the live URL after deploy. The app markup won't get a rich result, because Google requires ratings for that and we deliberately don't include store ratings.
+- **Comparison drafts:** checked on desktop and phone. Fixed the byline date. On phones the tables scroll sideways inside their box.
+- **Outreach:** `docs/seo/outreach.md` has the target list, a pitch template, listing tasks and video ideas.
+
 ## Weeks 2–3: content (same branch)
 
 ### Published pages (17 URLs in the sitemap)

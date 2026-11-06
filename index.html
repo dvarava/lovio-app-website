@@ -68,18 +68,16 @@
     <link rel="icon" href="/favicon.ico" sizes="48x48">
     <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192.png">
     <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="/styles.css?v=20261106">
-    <link rel="stylesheet" href="/home.css?v=20261106">
+    <link rel="preload" href="/assets/fonts/alexandria-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/img/memory-1.webp" as="image" fetchpriority="high">
+    <link rel="stylesheet" href="/styles.css?v=20261106-2">
+    <link rel="stylesheet" href="/home.css?v=20261106-2">
 </head>
 
 <body>
     <div class="site-header wrap">
         <header class="nav" data-open="false">
-            <a href="/" class="brand" aria-label="Lovio home"><img src="/assets/logo.png" alt=""><span>lovio</span></a>
+            <a href="/" class="brand" aria-label="Lovio home"><img src="/assets/logo-96.webp" alt=""><span>lovio</span></a>
             <nav class="nav-links" id="site-menu" aria-label="Main">
                 <a href="/features/couples-widgets/">Widgets</a>
                 <a href="/features/couples-games/">Games</a>
@@ -115,7 +113,7 @@
                         <path
                             d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z" />
                     </svg>
-                        <span><small>Download on the</small><b>App Store</b></span>
+                        <span><small>Download on the</small> <b>App Store</b></span>
                     </a>
                     <a class="btn-store btn-store--light" href="/go/android?placement=hero" target="_blank" rel="noopener" aria-label="Get it on Google Play">
                         <svg width="20" height="22" viewBox="0 0 24 24" aria-hidden="true">
@@ -126,7 +124,7 @@
                         <path fill="#FFCF00" d="m15.11 14.76-2.86-2.85-8.55 9.69c.48.51 1.24.57 2.1.08l9.31-5.3Z" />
                         <path fill="#FF3A44" d="m15.11 8.98-9.31-5.3c-.86-.49-1.62-.43-2.1.08l8.55 9.69 2.86-2.85Z" />
                     </svg>
-                        <span><small>Get it on</small><b>Google Play</b></span>
+                        <span><small>Get it on</small> <b>Google Play</b></span>
                     </a>
                 </div>
             </div>
@@ -171,7 +169,7 @@
                 <!-- Emma's phone: her lock screen -->
                 <div class="h-phone h-phone--emma" aria-hidden="true">
                     <div class="h-screen h-lock">
-                        <div class="h-lock-wall"><img src="/assets/img/memory-1.jpg" alt=""></div>
+                        <div class="h-lock-wall"><img src="/assets/img/memory-1.webp" alt="" fetchpriority="high"></div>
                         <div class="h-lock-shade"></div>
                         <div class="h-s-island"></div>
                         <div class="h-lock-date">Thursday 5 November</div>
@@ -184,8 +182,8 @@
                             </div>
                         </div>
                         <div class="h-lock-stack">
-                            <div class="h-ntf h-ntf--new"><span class="h-ntf-icon"><img src="/assets/icon.png" alt=""></span><div class="h-ntf-text"><div class="h-ntf-head"><b>Lovio</b><span>now</span></div>Leo left you a note: “Miss you already”</div></div>
-                            <div class="h-ntf" style="opacity:.92"><span class="h-ntf-icon"><img src="/assets/icon.png" alt=""></span><div class="h-ntf-text"><div class="h-ntf-head"><b>Daily Spark</b><span>8:02</span></div>Leo answered today's question. Your turn!</div></div>
+                            <div class="h-ntf h-ntf--new"><span class="h-ntf-icon"><img src="/assets/icon-192.webp" alt=""></span><div class="h-ntf-text"><div class="h-ntf-head"><b>Lovio</b><span>now</span></div>Leo left you a note: “Miss you already”</div></div>
+                            <div class="h-ntf" style="opacity:.92"><span class="h-ntf-icon"><img src="/assets/icon-192.webp" alt=""></span><div class="h-ntf-text"><div class="h-ntf-head"><b>Daily Spark</b><span>8:02</span></div>Leo answered today's question. Your turn!</div></div>
                         </div>
                         <div class="h-lock-ctrl" style="left:46px"><svg width="22" height="22" viewBox="0 0 24 24" fill="#fff"><path d="M8 2h8l-1 5H9zM9 8h6v12a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2z" /></svg></div>
                         <div class="h-lock-ctrl" style="right:46px"><svg width="22" height="22" viewBox="0 0 24 24" fill="#fff"><path d="M4 7h3l2-3h6l2 3h3a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1zm8 3a4 4 0 1 0 0 8 4 4 0 0 0 0-8z" /></svg></div>
@@ -237,7 +235,7 @@
                     <span class="h-knot" aria-hidden="true"></span>
                     <div class="h-vis" role="img" aria-label="A doodle on the Canvas widget, a Lovio notification and a sticky note">
                         <div class="h-doodle"><img src="/assets/img/doodle.png" alt=""></div>
-                        <div class="h-banner"><div class="h-ntf"><span class="h-ntf-icon"><img src="/assets/icon.png" alt=""></span><div class="h-ntf-text"><div class="h-ntf-head"><b>Lovio</b><span>12:47</span></div>Leo sent you a doodle ✏️</div></div></div>
+                        <div class="h-banner"><div class="h-ntf"><span class="h-ntf-icon"><img src="/assets/icon-192.webp" alt=""></span><div class="h-ntf-text"><div class="h-ntf-head"><b>Lovio</b><span>12:47</span></div>Leo sent you a doodle ✏️</div></div></div>
                         <div class="h-sticky">Lunch at 1? 🍜</div>
                         <div class="h-sticky-dot h-sticky-dot--lg"></div>
                         <div class="h-sticky-dot h-sticky-dot--sm"></div>
@@ -270,7 +268,7 @@
                         <span class="h-knot" aria-hidden="true"></span>
                         <div class="h-vis" role="img" aria-label="A picnic photo with the Next up: Tonight date card">
                             <div class="h-glow h-date-glow"></div>
-                            <img class="h-date-photo" src="/assets/img/memory-4.jpg" alt="" loading="lazy">
+                            <img class="h-date-photo" src="/assets/img/memory-4.webp" alt="" loading="lazy">
                             <div class="h-date-tile"><img src="/assets/img/calendar.png" alt="">
                                 <div><div class="c">NEXT UP</div><div class="b">Tonight, 7:30</div><div class="s">Sunset picnic</div></div>
                             </div>
@@ -303,7 +301,7 @@
                     <h2 id="widgets-title" class="h-h2">Love, <span class="h-lt h-grad-cool">at a glance.</span></h2>
                     <p class="h-lead">Your favourite memory, your days together, the distance between you and their latest doodle — right where you look a hundred times a day. <a href="/features/couples-widgets/">See all widgets</a></p>
                     <ul class="h-wgrid">
-                        <li><div class="h-wg h-wg--memories"><img class="h-cover" src="/assets/img/memory-4.jpg" alt="Memories widget showing a picnic photo" loading="lazy"></div><div class="h-wl"><span class="h-cap">Memories</span><p>Look back together</p></div></li>
+                        <li><div class="h-wg h-wg--memories"><img class="h-cover" src="/assets/img/memory-4.webp" alt="Memories widget showing a picnic photo" loading="lazy"></div><div class="h-wl"><span class="h-cap">Memories</span><p>Look back together</p></div></li>
                         <li><div class="h-wg h-wg--lg h-wg--days" role="img" aria-label="Days Together widget: 347 days together"><img class="h-cover" src="/assets/img/widget-blur.jpg" alt="" loading="lazy"><div class="h-wg-faces"><img src="/assets/img/avatar-him.jpg" alt=""><img src="/assets/img/avatar-her.jpg" alt=""></div><div class="h-wg-count"><b>347 days</b><span>together</span></div></div><div class="h-wl"><span class="h-cap">Days together</span><p>Count every day</p></div></li>
                         <li><div class="h-wg h-wg--lg h-wg--distance" role="img" aria-label="Live Distance widget: 344 km apart"><img class="h-cover" src="/assets/img/map-paris.jpg" alt="" loading="lazy"><span class="h-wg-km">344 km</span><img class="h-wg-pin h-wg-pin--a" src="/assets/img/avatar-him.jpg" alt=""><img class="h-wg-pin h-wg-pin--b" src="/assets/img/avatar-her.jpg" alt=""></div><div class="h-wl"><span class="h-cap">Live distance</span><p>Never far apart</p></div></li>
                         <li><div class="h-wg h-wg--canvas"><img class="h-cover" src="/assets/img/doodle.png" alt="Canvas widget showing a doodle" loading="lazy"></div><div class="h-wl"><span class="h-cap">Canvas</span><p>Send a little doodle</p></div></li>
@@ -356,11 +354,24 @@
                 </div>
             </section>
 
+            <!-- GUIDES -->
+            <section class="h-guides" aria-labelledby="guides-title">
+                <div class="h-wrap">
+                    <p class="h-cap">Guides</p>
+                    <h2 id="guides-title" class="h-h2">Ideas for <span class="h-lt h-grad-cool">tonight.</span></h2>
+                    <ul class="h-guide-list">
+                        <li><a class="h-guide" href="/blog/long-distance-date-ideas/"><span class="h-cap">Long distance</span><b>35 long-distance date ideas you can actually do</b><span>Sorted by time-zone gap, budget and effort.</span></a></li>
+                        <li><a class="h-guide" href="/blog/drawing-ideas-for-couples/"><span class="h-cap">Doodles</span><b>60 cute drawing ideas for couples</b><span>Easy doodles to send, from good-morning to inside jokes.</span></a></li>
+                        <li><a class="h-guide" href="/blog/games-to-play-with-your-partner-on-your-phone/"><span class="h-cap">Play</span><b>Games to play with your partner on your phone</b><span>Together on the sofa or miles apart.</span></a></li>
+                    </ul>
+                    <p class="h-guides-more"><a href="/blog/">All guides</a></p>
+                </div>
+            </section>
             <!-- FINAL -->
             <section class="h-final" aria-labelledby="final-title">
                 <div class="h-glow h-final-glow" aria-hidden="true"></div>
                 <div class="h-wrap">
-                    <img class="h-appicon" src="/assets/icon.png" alt="Lovio app icon">
+                    <img class="h-appicon" src="/assets/icon-192.webp" alt="Lovio app icon">
                     <h2 id="final-title" class="h-h2">Start your story<br><span class="h-lt h-grad-logo">tonight.</span></h2>
                     <p class="h-lead">Free to download on iPhone and Android.</p>
                     <div class="store-row">
@@ -369,7 +380,7 @@
                         <path
                             d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z" />
                     </svg>
-                        <span><small>Download on the</small><b>App Store</b></span>
+                        <span><small>Download on the</small> <b>App Store</b></span>
                     </a>
                     <a class="btn-store btn-store--glass" href="/go/android?placement=footer-cta" target="_blank" rel="noopener" aria-label="Get it on Google Play">
                         <svg width="20" height="22" viewBox="0 0 24 24" aria-hidden="true">
@@ -380,7 +391,7 @@
                         <path fill="#FFCF00" d="m15.11 14.76-2.86-2.85-8.55 9.69c.48.51 1.24.57 2.1.08l9.31-5.3Z" />
                         <path fill="#FF3A44" d="m15.11 8.98-9.31-5.3c-.86-.49-1.62-.43-2.1.08l8.55 9.69 2.86-2.85Z" />
                     </svg>
-                        <span><small>Get it on</small><b>Google Play</b></span>
+                        <span><small>Get it on</small> <b>Google Play</b></span>
                     </a>
                 </div>
                 </div>
@@ -392,7 +403,7 @@
         <div class="wrap">
             <div class="footer-top">
                 <div>
-                    <a href="/" class="brand" aria-label="Lovio home"><img src="/assets/logo.png" alt=""
+                    <a href="/" class="brand" aria-label="Lovio home"><img src="/assets/logo-96.webp" alt=""
                             style="width:30px;height:30px"><span style="font-size:22px">lovio</span></a>
                     <p class="footer-tagline">The couples app for every single day.</p>
                 </div>
@@ -416,7 +427,7 @@
         </div>
     </footer>
 
-    <script src="/site.js?v=20261106"></script>
+    <script src="/site.js?v=20261106-2"></script>
 </body>
 
 </html>

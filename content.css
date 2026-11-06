@@ -86,7 +86,10 @@
 .c-visual figcaption {
   margin-top: 28px;
   font-size: 13px;
-  color: var(--ink-4);
+  color: var(--ink-3);
+}
+.c-visual .widget-label {
+  color: var(--ink-3);
 }
 .c-games {
   display: grid;
