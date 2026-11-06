@@ -1,0 +1,17 @@
+{%- set relatedPages = related | pagesByUrl(collections.all) %}
+{%- if relatedPages.length %}
+<section class="c-related" aria-labelledby="related-title">
+    <h2 id="related-title" class="c-section-title">Keep exploring</h2>
+    <ul class="c-cards">
+        {%- for item in relatedPages %}
+        <li>
+            <a class="c-card" href="{{ item.url }}">
+                <span class="c-card-kicker">{{ "Guide" if item.data.type == "article" else ("Comparison" if item.data.type == "compare" else "Feature") }}</span>
+                <span class="c-card-title">{{ item.data.cardTitle or item.data.h1 }}</span>
+                <span class="c-card-text">{{ item.data.cardText or item.data.description }}</span>
+            </a>
+        </li>
+        {%- endfor %}
+    </ul>
+</section>
+{%- endif %}

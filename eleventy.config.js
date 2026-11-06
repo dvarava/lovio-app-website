@@ -16,6 +16,7 @@ const PASSTHROUGH = [
     "assets",
     ".well-known",
     "styles.css",
+    "content.css",
     "home.css",
     "site.js",
     "favicon.ico",
@@ -32,6 +33,23 @@ module.exports = function (eleventyConfig) {
     // Pages opt into the sitemap with `sitemap: true` in their front matter.
     eleventyConfig.addCollection("sitemap", (api) =>
         api.getAll().filter((item) => item.data.sitemap === true && item.data.draft !== true),
+    );
+
+    eleventyConfig.addFilter("readableDate", (iso) =>
+        new Date(`${iso}T12:00:00Z`).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" }),
+    );
+
+    eleventyConfig.addFilter("whereData", (items, key, value) =>
+        (items || []).filter((item) => item.data[key] === value && !item.data.draft),
+    );
+
+    // Pages listed by URL in front matter (`related: [/features/…/]`) → page objects.
+    eleventyConfig.addFilter("pagesByUrl", (urls, all) =>
+        (urls || []).map((url) => {
+            const found = all.find((item) => item.url === url && !item.data.draft);
+            if (!found) throw new Error(`related link to missing or draft page: ${url}`);
+            return found;
+        }),
     );
 
     return {

@@ -1,5 +1,31 @@
 # Launch checklist
 
+## Weeks 2–3: content (same branch)
+
+### Published pages (17 URLs in the sitemap)
+- Features: `/features/couples-widgets/`, `/features/drawing-widget/`, `/features/couples-games/`, `/features/long-distance/`, `/features/daily-questions/`
+- Company: `/about/`, `/press/`
+- Guides: `/blog/` plus `/blog/how-to-add-a-couples-widget-on-iphone-and-android/`, `/blog/drawing-ideas-for-couples/`, `/blog/long-distance-date-ideas/`, `/blog/games-to-play-with-your-partner-on-your-phone/`
+
+### Drafts (not built, not in the sitemap)
+- `/compare/widgetable-alternative/`, `/compare/locket-for-couples/`. Preview them with `DRAFTS=1 npm run serve`; drafts are `noindex`. Blockers: owner review, plus the Android checks in `product-claims.md`. Create a `/compare/` hub once both are live.
+
+### Site-wide changes
+- New nav on the homepage and legacy pages: Widgets, Games, Long distance, Guides, Support (it replaces the `/#features`, `/#how` and `/#faq` anchor links).
+- New footer columns on every page: Product (5 feature pages + Download), Company (About, Guides, Press kit, Support, Feedback), Legal.
+- Homepage chapters link to the Daily questions, Drawing widget and Games pages; the widgets section links to the Couples widgets page.
+
+### Checks (`npm run ci`)
+- Unique titles and descriptions, one H1, a canonical that matches the sitemap URL, valid JSON-LD with no `aggregateRating`.
+- Every internal link resolves; every sitemap page is linked from another page; `related:` links that point to missing or draft pages fail the build.
+- Browser check of 15 pages at 375px: no horizontal scroll, no broken images, one H1 each.
+
+### Owner tasks for content
+1. Read every page for accuracy. Items marked ⚠️ in `product-claims.md` especially need confirming.
+2. Approve the byline "The Lovio team".
+3. Provide real app screenshots. The visuals are currently illustrations built from the homepage's widget art, captioned as such.
+4. Approve or edit the comparison drafts, then remove `draft: true`.
+
 ## Week 1: technical foundation (branch `seo/week-1-foundation`)
 
 ### Done in the repo

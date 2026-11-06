@@ -14,4 +14,21 @@ Every product claim used on a published page needs a row here with evidence. Pag
 | The Arcade: 8 two-player games (Pairfall, Block Bloom, 2048, Charades, Sling Puck, Four in a Row, Crushwords, Find the Match), live or turn-based | Home (mentioned generally) | App Store release notes, 2026-10-30 | 2026-11-06 | ✅ (confirm Android parity) |
 | Us Streak (daily streak, can be restored) | — | App Store release notes, 2026-10-30 | 2026-11-06 | ✅ |
 | App Store rating 4.6 (370 ratings, US) | Not used | App Store lookup API | 2026-11-06 | Text only, dated; never as schema |
+| Lovio notifies the partner when a new doodle arrives | Drawing widget page | Existing homepage illustration ("Leo sent you a doodle") | — | ⚠️ confirm the notification exists on both platforms |
+| Date ideas: swipe together, match, long-distance option, save to bucket list | Long distance, About, Press | Store description ("swipe through", "close or long distance", bucket list) | 2026-11-06 | ✅ (confirm "match" wording) |
+| Arcade games can be played live or turn-based | Games page, games guide | App Store release notes, 2026-10-30 | 2026-11-06 | ✅ |
+| Daily Spark answers are revealed once both have answered | Daily questions page | Existing homepage copy ("You both answer, then reveal") | 2026-11-06 | ✅ |
+| Lock Screen widgets on iPhone | Widget guide (general iOS steps only) | Homepage illustration | — | ⚠️ confirm which Lovio widgets support the Lock Screen |
 | Made by FOURPLEX SIA, Latvia | Home footer, FAQ, JSON-LD | App Store seller name; existing footer | 2026-11-06 | ✅ |
+
+## Competitor claims (comparison drafts)
+
+Both comparison pages are `draft: true` and are not built or listed in the sitemap. To publish one, have someone review it against the current listing, then remove `draft: true`.
+
+| Competitor | Claim | Source | Accessed | Status |
+|---|---|---|---|---|
+| Widgetable (HAPPENY TECHNOLOGY PTE. LTD.) | For besties and couples; pets, plants, Sleep Widget, Mood Bubble/Jar, Distance Widget, "Pin It!" snaps, emojis, doodles and texts; optional subscription; iOS 16+ | https://apps.apple.com/app/id1641107226 (App Store lookup API) | 2026-11-06 | ✅ from listing |
+| Widgetable | Days counter, daily questions, date ideas, games | Not listed in the description we checked | 2026-11-06 | Shown as "not listed", never "doesn't have" |
+| Widgetable | Android availability | Not checked | — | ⚠️ check Google Play before publishing |
+| Locket Widget (Locket Labs, Inc.) | Live photos to the Home Screen; up to 20 friends; reactions; history and monthly recap videos; "Crush"/"Best Friend" single-person widgets; free | https://apps.apple.com/app/id1600525061 (App Store lookup API) | 2026-11-06 | ✅ from listing |
+| Locket Widget | Drawings, distance, days counter, questions, games | Not listed in the description we checked | 2026-11-06 | Shown as "not listed" |

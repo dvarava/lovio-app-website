@@ -1,0 +1,13 @@
+---
+layout: layouts/base.njk
+---
+<section class="c-hero" aria-labelledby="page-title">
+    <p class="eyebrow">{{ eyebrow }}</p>
+    <h1 id="page-title">{{ h1Html | safe if h1Html else h1 }}</h1>
+    <p class="lead">{{ intro }}</p>
+</section>
+<div class="c-prose">
+    {{ content | safe }}
+</div>
+{% include "partials/related.njk" %}
+{% include "partials/cta.njk" %}

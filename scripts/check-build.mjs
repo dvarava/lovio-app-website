@@ -92,6 +92,31 @@ for (const file of walk(OUT).filter((f) => f.endsWith(".html"))) {
     }
 }
 
+// 5. Internal links resolve, and every sitemap page is linked from another page.
+const builtPages = walk(OUT).filter((f) => f.endsWith(".html"));
+const linkedPaths = new Set();
+const resolve = (path) => {
+    const clean = decodeURI(path.split(/[?#]/)[0]);
+    if (clean === "" || clean.startsWith("/go/")) return true;
+    const candidates = clean.endsWith("/")
+        ? [join(OUT, clean, "index.html")]
+        : [join(OUT, clean), join(OUT, `${clean}.html`), join(OUT, clean, "index.html")];
+    return candidates.some((c) => existsSync(c) && statSync(c).isFile());
+};
+for (const file of builtPages) {
+    const html = readFileSync(file, "utf8");
+    const self = "/" + relative(OUT, file).replace(/index\.html$/, "");
+    for (const [, href] of html.matchAll(/\shref="(\/[^"]*)"/g)) {
+        if (!resolve(href)) fail(`${relative(OUT, file)}: broken link ${href}`);
+        const target = href.split(/[?#]/)[0];
+        if (target !== self) linkedPaths.add(target);
+    }
+}
+for (const loc of locs) {
+    const path = loc.slice(SITE.length);
+    if (path !== "/" && !linkedPaths.has(path)) fail(`orphan page (no internal links to it): ${path}`);
+}
+
 if (errors.length) {
     console.error(`✗ ${errors.length} problem(s):\n  - ${errors.join("\n  - ")}`);
     process.exit(1);
