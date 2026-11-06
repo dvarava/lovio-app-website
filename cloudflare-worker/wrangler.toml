@@ -5,3 +5,9 @@ compatibility_date = "2026-08-03"
 routes = [
     { pattern = "getlovio.app/go/*", zone_name = "getlovio.app" }
 ]
+
+# Store-click counts, queried with the Analytics Engine SQL API.
+# blob1 platform, blob2 source page, blob3 placement, blob4-7 utm_*, blob8 country.
+[[analytics_engine_datasets]]
+binding = "STORE_CLICKS"
+dataset = "lovio_store_clicks"

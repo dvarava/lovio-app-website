@@ -1,0 +1,14 @@
+{
+  "name": "lovio-app-website",
+  "private": true,
+  "description": "getlovio.app marketing site",
+  "scripts": {
+    "build": "eleventy",
+    "serve": "eleventy --serve --port 8765",
+    "check": "node scripts/check-build.mjs",
+    "ci": "eleventy && node scripts/check-build.mjs"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.8"
+  }
+}
