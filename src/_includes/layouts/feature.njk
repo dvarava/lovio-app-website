@@ -1,0 +1,21 @@
+---
+layout: layouts/base.njk
+---
+<section class="c-hero" aria-labelledby="page-title">
+    <p class="eyebrow">{{ eyebrow }}</p>
+    <h1 id="page-title">{{ h1Html | safe if h1Html else h1 }}</h1>
+    <p class="lead">{{ intro }}</p>
+    {%- set placement = "page-hero" %}{% set dark = false %}
+    {% include "partials/store-buttons.njk" %}
+    {%- if heroVisual %}
+    {% include heroVisual %}
+    {%- endif %}
+</section>
+
+<article class="c-prose">
+    {{ content | safe }}
+</article>
+
+{% include "partials/faq.njk" %}
+{% include "partials/related.njk" %}
+{% include "partials/cta.njk" %}

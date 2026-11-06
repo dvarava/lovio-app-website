@@ -1,0 +1,18 @@
+---
+layout: layouts/base.njk
+---
+<article class="c-article">
+    <header class="c-hero c-hero--article">
+        <p class="eyebrow">{{ eyebrow }}</p>
+        <h1 id="page-title">{{ h1 }}</h1>
+        <p class="lead">{{ intro }}</p>
+        <p class="c-byline">By {{ site.author }} · <time datetime="{{ publishedAt }}">{{ publishedAt | readableDate }}</time>{% if updatedAt %} · Updated <time datetime="{{ updatedAt }}">{{ updatedAt | readableDate }}</time>{% endif %}</p>
+    </header>
+    <div class="c-prose">
+        {{ content | safe }}
+    </div>
+</article>
+
+{% include "partials/faq.njk" %}
+{% include "partials/related.njk" %}
+{% include "partials/cta.njk" %}

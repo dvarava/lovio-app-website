@@ -1,0 +1,45 @@
+---
+layout: layouts/base.njk
+type: hub
+override:tags: []
+title: Relationship Guides for Couples | Lovio
+description: Practical, original guides for couples — long-distance date ideas, drawing ideas, games to play together and how to set up couples widgets.
+h1: Guides for couples
+crumbLabel: Guides
+override:breadcrumbs: []
+schemaType: CollectionPage
+groups:
+  - label: Long distance
+    category: long-distance
+  - label: Widgets & doodles
+    category: widgets
+  - label: Play together
+    category: play
+---
+<section class="c-hero" aria-labelledby="page-title">
+    <p class="eyebrow">Lovio guides</p>
+    <h1 id="page-title">Guides for <em>couples</em></h1>
+    <p class="lead">Ideas you can use tonight — whether or not you use Lovio. Written by the Lovio team.</p>
+</section>
+
+{%- for group in groups %}
+{%- set posts = collections.guides | whereData("category", group.category) %}
+{%- if posts.length %}
+<section class="c-group" aria-labelledby="group-{{ group.category }}">
+    <h2 id="group-{{ group.category }}">{{ group.label }}</h2>
+    <ul class="c-cards">
+        {%- for post in posts %}
+        <li>
+            <a class="c-card" href="{{ post.url }}">
+                <span class="c-card-kicker">{{ post.data.publishedAt | readableDate }}</span>
+                <span class="c-card-title">{{ post.data.h1 }}</span>
+                <span class="c-card-text">{{ post.data.description }}</span>
+            </a>
+        </li>
+        {%- endfor %}
+    </ul>
+</section>
+{%- endif %}
+{%- endfor %}
+
+{% include "partials/cta.njk" %}

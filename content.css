@@ -1,0 +1,433 @@
+/* ==========================================================================
+   Lovio — content pages (features, guides, about, comparisons)
+   Builds on styles.css tokens; loaded only by the Eleventy layouts.
+   ========================================================================== */
+
+.c-main {
+  padding-bottom: 8px;
+}
+
+/* Breadcrumbs */
+.c-crumbs {
+  margin-top: 28px;
+}
+.c-crumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-size: 13px;
+  color: var(--ink-4);
+}
+.c-crumbs li + li::before {
+  content: '/';
+  margin-right: 6px;
+  color: var(--line-2);
+}
+.c-crumbs a {
+  color: var(--ink-3);
+  text-decoration: none;
+}
+.c-crumbs a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+/* Hero */
+.c-hero {
+  text-align: center;
+  padding-top: 64px;
+}
+.c-hero .eyebrow {
+  justify-content: center;
+}
+.c-hero h1 {
+  font-size: 64px;
+  line-height: 1.02;
+  font-weight: 800;
+  letter-spacing: -2.6px;
+  max-width: 900px;
+  margin: 18px auto;
+}
+.c-hero h1 em {
+  font-style: normal;
+  font-weight: 300;
+}
+.c-hero .lead {
+  max-width: 640px;
+  margin: 0 auto;
+}
+.c-hero .store-row {
+  justify-content: center;
+  margin-top: 32px;
+}
+.c-hero--article h1 {
+  font-size: 54px;
+  letter-spacing: -2px;
+}
+.c-byline {
+  margin-top: 20px;
+  font-size: 14px;
+  color: var(--ink-4);
+}
+
+/* Visuals */
+.c-visual {
+  margin: 64px auto 0;
+  padding: 56px 24px;
+  border-radius: var(--radius-lg);
+  background: var(--blush);
+}
+.c-visual .widget-list {
+  --u: 1.2;
+}
+.c-visual figcaption {
+  margin-top: 28px;
+  font-size: 13px;
+  color: var(--ink-3);
+}
+.c-visual .widget-label {
+  color: var(--ink-3);
+}
+.c-games {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+.c-games li {
+  padding: 22px 16px;
+  border-radius: 22px;
+  background: var(--surface);
+  box-shadow: inset 0 0 0 1px var(--hair);
+  font-weight: 700;
+  font-size: 16px;
+}
+.c-games li small {
+  display: block;
+  margin-top: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.c-question {
+  position: relative;
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 32px;
+  border-radius: 28px;
+  background: linear-gradient(140deg, #FF5A6E, #FF8A5B);
+  color: #fff;
+  text-align: left;
+  box-shadow: var(--shadow-photo);
+}
+.c-question img {
+  position: absolute;
+  right: 22px;
+  top: -34px;
+  width: 92px;
+}
+.c-question span {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .14em;
+  opacity: .85;
+}
+.c-question p {
+  margin-top: 10px;
+  font-size: 24px;
+  line-height: 1.3;
+  font-weight: 700;
+  max-width: 380px;
+}
+
+/* Prose */
+.c-prose {
+  max-width: 760px;
+  margin: 72px auto 0;
+}
+.c-prose > :first-child {
+  margin-top: 0;
+}
+.c-prose h2 {
+  font-size: 34px;
+  line-height: 1.15;
+  font-weight: 800;
+  letter-spacing: -1px;
+  margin: 64px 0 16px;
+}
+.c-prose h3 {
+  font-size: 21px;
+  line-height: 1.3;
+  font-weight: 700;
+  margin: 36px 0 10px;
+}
+.c-prose p,
+.c-prose li {
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--ink-2);
+}
+.c-prose p + p {
+  margin-top: 16px;
+}
+.c-prose ul,
+.c-prose ol {
+  padding-left: 24px;
+  margin: 16px 0;
+}
+.c-prose li + li {
+  margin-top: 8px;
+}
+.c-prose li::marker {
+  color: var(--accent);
+  font-weight: 700;
+}
+.c-prose strong {
+  color: var(--ink);
+}
+.c-prose a {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+.c-prose hr {
+  border: 0;
+  border-top: 1px solid var(--line-2);
+  margin: 48px 0;
+}
+.c-prose blockquote,
+.c-note {
+  margin: 28px 0;
+  padding: 22px 26px;
+  border-radius: 22px;
+  background: var(--surface);
+  box-shadow: inset 0 0 0 1px var(--hair);
+}
+.c-prose blockquote p,
+.c-note p {
+  font-size: 16px;
+}
+.c-quick {
+  margin: 0 0 40px;
+  padding: 24px 28px;
+  border-radius: 24px;
+  background: var(--blush);
+}
+.c-quick p {
+  font-size: 17px;
+}
+.c-quick b {
+  color: var(--accent);
+}
+.c-table {
+  overflow-x: auto;
+  margin: 28px 0;
+  border-radius: 20px;
+  box-shadow: inset 0 0 0 1px var(--hair);
+  background: var(--surface);
+}
+.c-table table {
+  width: 100%;
+  min-width: 560px;
+  border-collapse: collapse;
+  font-size: 15px;
+}
+.c-table th,
+.c-table td {
+  padding: 14px 18px;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--hair);
+  line-height: 1.5;
+  color: var(--ink-2);
+}
+.c-table th {
+  font-weight: 700;
+  color: var(--ink);
+  background: #FFFBF9;
+}
+.c-table tr:last-child td {
+  border-bottom: 0;
+}
+
+/* Steps inside prose */
+.c-prose ol.c-steps {
+  counter-reset: step;
+  list-style: none;
+  padding: 0;
+}
+.c-prose ol.c-steps > li {
+  counter-increment: step;
+  position: relative;
+  padding-left: 52px;
+  margin-top: 18px;
+}
+.c-prose ol.c-steps > li::before {
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--grad);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  display: grid;
+  place-items: center;
+}
+
+/* Section titles, FAQ, related, CTA */
+.c-section-title {
+  font-size: 40px;
+  line-height: 1.1;
+  font-weight: 800;
+  letter-spacing: -1.4px;
+}
+.c-faq {
+  max-width: 1040px;
+  margin: 112px auto 0;
+}
+.c-faq .faq-layout > header .c-section-title {
+  margin-top: 16px;
+}
+.c-related {
+  margin-top: 112px;
+}
+.c-related .c-section-title {
+  text-align: center;
+  margin-bottom: 32px;
+}
+.c-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.c-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 100%;
+  padding: 28px;
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  box-shadow: inset 0 0 0 1px var(--hair);
+  color: var(--ink);
+  text-decoration: none;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.c-card:hover {
+  color: var(--ink);
+  transform: translateY(-2px);
+  box-shadow: inset 0 0 0 1px var(--line-2), var(--shadow-card);
+}
+.c-card-kicker {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.c-card-title {
+  font-size: 20px;
+  line-height: 1.25;
+  font-weight: 700;
+}
+.c-card-text {
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--ink-3);
+}
+.c-cta {
+  margin-top: 112px;
+}
+.c-cta-icon {
+  flex: none;
+  border-radius: 18px;
+}
+
+/* Blog hub */
+.c-group {
+  margin-top: 72px;
+}
+.c-group h2 {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -.8px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 900px) {
+  .c-hero h1 {
+    font-size: 46px;
+    letter-spacing: -1.6px;
+  }
+  .c-hero--article h1 {
+    font-size: 40px;
+  }
+  .c-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+  .c-games {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .c-section-title {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 640px) {
+  .c-hero {
+    padding-top: 40px;
+  }
+  .c-hero h1,
+  .c-hero--article h1 {
+    font-size: 36px;
+    letter-spacing: -1.2px;
+  }
+  .c-hero .lead {
+    font-size: 17px;
+  }
+  .c-visual {
+    margin-top: 44px;
+    padding: 40px 12px;
+    border-radius: 28px;
+  }
+  .c-visual .widget-list {
+    --u: 1;
+    gap: 24px 20px;
+  }
+  .c-prose {
+    margin-top: 48px;
+  }
+  .c-prose h2 {
+    font-size: 27px;
+    margin-top: 48px;
+  }
+  .c-prose p,
+  .c-prose li {
+    font-size: 17px;
+  }
+  .c-cards {
+    grid-template-columns: 1fr;
+  }
+  .c-question p {
+    font-size: 20px;
+  }
+  .c-faq,
+  .c-related,
+  .c-cta {
+    margin-top: 80px;
+  }
+}

@@ -1,0 +1,18 @@
+{%- if faq %}
+<section class="c-faq" aria-labelledby="faq-title">
+    <div class="faq-layout">
+        <header>
+            <p class="eyebrow">FAQ</p>
+            <h2 id="faq-title" class="c-section-title">Good to know</h2>
+        </header>
+        <div class="faq">
+            {%- for item in faq %}
+            <details{% if loop.first %} open{% endif %}>
+                <summary>{{ item.q }}</summary>
+                <p>{{ item.a | safe }}</p>
+            </details>
+            {%- endfor %}
+        </div>
+    </div>
+</section>
+{%- endif %}
